@@ -1,0 +1,84 @@
+Python tutorial – chapter 6:
+https://docs.python.org/3/tutorial/modules.html
+
+
+Repetition about Python scopes of symbol tables (namespaces):
+- local namespace
+- local namespace of enclosing structure (function/class)
+- global namespace
+- namespace of builtins
+
+
+
+6.1)
+Python module (file with “.py” extension) is comprised of:
+- executable part
+- definition part (functions, classes, variables)
+ 
+6.2)
+python special variable __name__ is set to:
+- "__main__" - when the given script is executed
+-	"NameOfImportedModule" - during import (namespace of imported module)
+
+6.3)
+dir() function:
+-	return list of names defined in global namespace
+dir(module_abc) function:
+-	return list of names defined in module_abc namespace
+
+6.4)
+import module_abc
+import module_abc as m1
+-	adding “module_abc”, “m1” directly to the given script Global namespace (creating by this new namespaces for those modules)
+
+6.5)
+from module_abc import *
+-	adding every name from module_abc directly to the given script Global namespace (apart of names starting from "_".)
+from module_abc import funct123 (as foo1)
+-	adding funct123/foo1 names directly to the given script Global namespace
+
+6.6)
+What if we import names that are already defined in the given script Global namespace?
+-	Already defined names in the given script Global namespace – cant be overridden.
+
+6.7)
+How python modules search path looks like?
+-	Builtin modules -> if not then:
+sys.path:
+--	current dir -> if not then:
+--	PATHONPATH variable -> if not then:
+--	installations dir (including standard libraries)
+
+6.8)
+Compiled cached python module files (bytecode)
+-	__pycache__/module_abc.cpython3.7.pyc
+-	platform agnostic
+how interpreter knows if compiled module is actual?
+-- modification_date
+when Python doesnt check cached files?
+-- lack of source code
+-- cmd Python
+
+-	python -B `python_script.py` (dont write .pyc files)
+-	python -O / -OO `python_script.py` (optimizing caching approach)
+
+6.9)
+What is Python namespace package?
+-	Introduced to Python 3.3 module without init__.py file. 
+
+6.10)
+What is Python ‘usual’ package?
+-	usual python package with __init __.py file
+-	__all__ special variable in __init__.py file defines module names to be included in the package
+--  __all__ = [m1, m2]	-> modules m1/m2 will be included to the given package
+
+
+6.11)
+How Python supports posibility to have Python-Package built based on multiple directories?
+-- rarely used __path__ variable implements this feature
+
+
+6.12)
+Absolute imports are recommended in main module (__name__=="main")?
+yes, 
+in contratry to this, relative imports can be used for sub-packages dependencies
