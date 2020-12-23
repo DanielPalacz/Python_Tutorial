@@ -1,0 +1,93 @@
+
+Intro:
+-------------------------------------------------------------
+
+statement - single line of code, examples:
+- assigment statement
+- print statement
+- expression statement
+- other type of statements
+
+
+expression statement
+-- combination of any combination of:
+--- literal values
+--- arithmetic operators
+--- boolean operators
+--- variables
+--- other expression statements
+
+-------------------------------------------------------------
+
+
+
+7.1. Fancier Output Formatting
+
+
+formatting of your output:
+- fstrings (formatted string literals)
+- str.format() method
+- % Operator, c-like old style way of string formatting
+
+
+when you don’t need fancy output:
+- str()		->	is meant to return representations of values which are fairly human-readable
+- repr()	->	function returns a printable representational string of the given object (or will force a SyntaxError if there is no equivalent syntax)
+- string module
+
+
+7.1.1. Formatted String Literals (fstrings)
+--- f"Example of basic fstring: {}"
+additional options		
+--- f"Pi value is: {math.pi:.3f}"	-> rounding Pi to 3 places aafter decimal
+--- f"{name:10} ===> {phone:10d}"	-> guaranting 10 places for str/digits
+--- Other modifiers can be used to convert the value before it is formatted. '!a' applies ascii(), '!s' applies str(), and '!r' applies repr():
+
+
+
+7.1.2. The String format() Method
+7.1.3. Manual String Formatting
+7.1.4. Old string formatting
+
+-------------------------------------------------------------
+
+
+
+7.2. Reading and Writing Files
+
+file_object = open(filename, mode)
+mode options:
+--- 'r' when the file will only be read
+--- 'w' for only writing (an existing file with the same name will be erased),
+--- 'a' opens the file for appending; any data written to the file is automatically added to the end
+--- 'r+' opens the file for both reading and writing
+!!!
+--- 'r' will be assumed if it’s omitte
+--- normally, files are opened in text mode ('t' text mode (default)), read and write strings from and to the file which are encoded in a specific encoding. 
+------------ If encoding is not specified, the default is platform dependent (see open()).
+--- but 'b' appended to the mode opens the file in binary mode
+
+
+
+
+It is good practice to use the 'with' context managers when dealing with file objects.
+Why? 
+-------------------------------------------------------------
+Per tutorial:
+"The advantage is that the file is properly closed after its suite finishes, even if an exception is raised at some point. 
+Using with is also much shorter than writing equivalent try-finally blocks"
+
+
+
+7.2.1. Methods of File Objects
+
+
+If you want to read all the lines of a file in a list you can also use list(f) or f.readlines().
+
+
+7.2.2. Saving structured data with json
+
+serialization is the process of translating data structures or object state into: a format that can be stored (for example, in a file or memory buffer) or transmitted and reconstructed later.
+The standard module called json can take Python data hierarchies, and convert them to string representations; this process is called serializing.
+
+Reconstructing the data from the string representation is called deserializing.
