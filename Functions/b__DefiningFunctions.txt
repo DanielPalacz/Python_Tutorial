@@ -1,0 +1,76 @@
+
+
+reminder:
+------------------------
+* local/enclosing namespaces
+-- the interpreter creates a new namespace whenever a function executes
+-- that namespace is local to the function and remains in existence until the function terminates
+-- Namespaces are dictionaries
+------------------------ ------------------------ ------------------------ ------------------------
+
+
+
+procedure / function / method
+
+
+
+
+
+How arguments can be passed to functions?
+-- as Default arguments values
+-- as positional arguments 
+-- as keywords arguments	(kwarg=value)
+-- by using *arg feature	---> (in execution moment it receives unpacked tuple)
+-- by using **kwarg feature ---> (in execution moment it receives unpacked dictionary)
+
+
+
+
+What is determined by '/' and '*' in function definition?
+-- "/" forces to use only positional arguments before
+-- "*" forces to use only keyword arguments after
+
+
+
+What is required order for passing those arguments?
+-- positional before keywords
+-- *arg feature before **kwarg feature
+
+
+Default argument values:
+-- The default values are evaluated at the point of function definition in the defining scope
+-- The default value is evaluated only once. This makes a difference when the default is a mutable object such as a list, dictionary, or instances of most classes. 
+
+
+When positional / keywords parameters should be used?
+
+
+
+Typical function definitions:
+-- def f(pos1, /, pos_or_kw2, *, kwarg3)
+-- def f(pos1, /, pos_or_kw, **kwargs)
+-- def f(pos1, *args)
+-- def f(pos1, /, kw1, **kwargs)
+
+
+
+Atypical function definitions(or I jus dont like this):
+-- def f(*args, kwarg1)
+
+
+How you cant define functions?
+-- nothing can be after **kwargs
+-- positionals should be always first
+
+
+
+
+
+
+
+
+
+
+
+
+

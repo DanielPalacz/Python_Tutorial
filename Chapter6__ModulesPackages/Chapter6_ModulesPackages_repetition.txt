@@ -12,13 +12,13 @@ Repetition about Python scopes of symbol tables (namespaces):
 
 6.1)
 Python module (file with “.py” extension) is comprised of:
-- executable part
+- executable part ---> always executed during import
 - definition part (functions, classes, variables)
  
 6.2)
 python special variable __name__ is set to:
 - "__main__" - when the given script is executed
--	"NameOfImportedModule" - during import (namespace of imported module)
+-"NameOfImportedModule" - during import (namespace of imported module)
 
 6.3)
 dir() function:
@@ -65,12 +65,13 @@ when Python doesnt check cached files?
 6.9)
 What is Python namespace package?
 -	Introduced to Python 3.3 module without init__.py file. 
+-	A PEP 420 package which serves only as a container for subpackages.
 
 6.10)
 What is Python ‘usual’ package?
 -	usual python package with __init __.py file
 -	__all__ special variable in __init__.py file defines module names to be included in the package
---  __all__ = [m1, m2]	-> modules m1/m2 will be included to the given package
+--	__all__ = [m1, m2]	-> modules m1/m2 will be included to the given package
 
 
 6.11)
@@ -81,4 +82,4 @@ How Python supports posibility to have Python-Package built based on multiple di
 6.12)
 Absolute imports are recommended in main module (__name__=="main")?
 yes, 
-in contratry to this, relative imports can be used for sub-packages dependencies
+in contratry to this, relative imports can be used for sub-packages dependencies (however...)

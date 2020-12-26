@@ -1,0 +1,52 @@
+
+
+Namespace
+-- the structure used to organize the symbolic names assigned to objects in a Python program
+-- it is dictionary in which the keys are the object names and the values are the objects themselves. Each key-value pair maps a name to its corresponding object.
+
+
+Scope:
+-- The scope of a name is the region of a program in which that name has meaning.
+
+
+LEGB rule:
+-- The interpreter searches for a name from the inside out, looking in the: local, enclosing, global, and finally the built-in scope (namespace)
+-- The interpreter determines this at runtime based on where the name definition occurs and where in the code the name is referenced.
+
+
+
+Python scopes and namespaces:
+--------------------------------------------------------------------------------------------------------------
+
+* local/enclosing namespaces
+-- the interpreter creates a new namespace whenever a function executes
+-- that namespace is local to the function and remains in existence until the function terminates
+-- Namespaces are dictionaries
+
+
+* global namespace:
+-- dir()
+-- contains any names defined at the level of the main program
+-- other global-like namespaces (the interpreter also creates a global namespace for any module that your program loads with the import statement)
+-- Namespaces are dictionaries
+
+
+* built-in namespace:
+-- dir(__builtins__)
+-- The Python interpreter creates the built-in namespace when it starts up
+-- This namespace remains in existence until the interpreter terminates.
+-- built-in namespace doesn’t behave like a dictionary. Python implements it as a module.
+
+--------------------------------------------------------------------------------------------------------------
+
+
+
+Other Namespace-area functionalities
+-- globals() / locals() functions
+-- global/nonlocal keywords
+
+
+Rather not recomended
+-- using global/nonlocal keywords
+-- writing functions modifying data outside the local scope (kind of side efect)
+

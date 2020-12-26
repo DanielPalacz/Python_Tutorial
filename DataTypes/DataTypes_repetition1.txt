@@ -1,0 +1,100 @@
+
+
+
+Intro_1)
+--------
+Python Data Types:
+-- built-in data types (builtins module)
+-- other Data Types from Standard Library
+----------------------------------------
+
+
+
+Intro_2)
+--------
+Python built-in data types:
+-- Text Type:		str
+-- Numeric Types:	int, float, complex
+-- Sequence Types:	list, tuple, range
+-- Mapping Type:	dict
+-- Set Types:		set, frozenset
+-- Boolean Type:	bool
+-- Binary Types:	bytes, bytearray, memoryview
+
+
+
+Intro_3)
+--------
+Python other Data Types from Standard Library:
+-- datetime
+-- zoneinfo
+-- calendar
+-- more: -> https://docs.python.org/3/library/datatypes.html
+
+
+
+
+
+
+below 1-9 points are focused mostly on iterable data structure types
+
+
+
+1)
+Everything in Python is object (what does it mean?). But what it is python iterable object?
+-- an object (of data structure) capable to return its members at one time
+
+
+2)
+What type of iterables are already builtin in Python?
+-- two types: sequences / not-sequences
+
+
+3)
+What things are characteristic in sequences (iterable data structures)?
+-- "__getitem__()" <-> sequence[int]
+-- "__len__()"	<-> len(sequence)
+-- slicing / indexing (subscripting) features
+
+
+4)
+Examples of sequences and not-sequences
+-- sequences:	str, lists, bytes, tuples, range
+-- other:	dictionaries
+
+
+5)
+Python immutable Data Structures:
+-- int, float, bool, string literals, unicode, tuple, bytes literals, range
+
+
+6)
+Python mutable Data Structures:
+-- dictionaries, lists, sets
+
+
+7)
+Other 'common' operations supported by Python Data Structures?
+-- lists, tuples, strings:	concatenation (+ / *)
+-- enumerate(iterable) returns generator of (index, value) tuples
+-- dict.items returns also something like DataStructure based on tuples: (key, value)
+
+
+8)
+How Python`s Slicing works?
+
+-- iterable[start:end:step]
+
+---- start:  any int from [-(len(iterable)-1); len(iterable)-1]
+---- end:    any int from [-(len(iterable)-1); len(iterable)-1]
+---- step:   any not-zero int from [-(len(iterable)-1); len(iterable)-1]
+
+
+9)
+Python Slicing performs ShallowCopy.
+a1 = [0, 1, 2, ["three"]]
+a2 = a1[:]
+a1[3] = 3
+
+a2[3] = 3 because slicing (a2 = a1[:]) performed shallow copy in  terms of memory managment
+
