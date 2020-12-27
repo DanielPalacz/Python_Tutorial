@@ -1,12 +1,12 @@
 
 https://docs.python.org/3/reference/executionmodel.html
 
-
+parsing stage: 1-2
 1)
 Process the statements of your script in a sequential fashion
-
 2)
 Compile the source code to an intermediate format known as bytecode
 
+execution (runtime) stage
 3)
 Ship off the code for execution

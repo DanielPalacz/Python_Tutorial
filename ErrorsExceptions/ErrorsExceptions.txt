@@ -1,0 +1,51 @@
+
+
+1)
+During which phase of Python-script execution model "Syntax errors" are raised
+-- parsing stage
+(Errors detected during execution are called exceptions.)
+
+
+
+2)
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+try:
+    ~ code to execute
+
+except Error1:
+    ~ code to handle Error1
+
+except (Error2, Error3, Error4):
+    ~ code to handle Errors2-4
+
+except Error5 as e5:
+    ~ code to handle Error5
+    ~ print(inst.args) -> printing Exception arguments
+
+except:
+    ~ code to handle unexpected errors
+
+else:
+    ~ code to be executed if the try clause does not raise an exception
+
+finally:
+    ~ code to be executed in very end
+    ~ often for cleanup activities
+
+-----------------------------------------------------------------------------
+-----------------------------------------------------------------------------
+
+
+3)
+raise 
+-- statement allows the programmer to force a specified exception to occur
+-- raise ValueError  # shorthand for 'raise ValueError()'
+-- raise MyError("msg")  # shorthand for 'raise MyError("msg")'
+
+
+4)
+"8.6. User-defined Exceptions"
+https://docs.python.org/3/tutorial/errors.html#user-defined-exceptions
+

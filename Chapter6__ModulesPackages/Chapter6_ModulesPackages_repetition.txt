@@ -82,4 +82,4 @@ How Python supports posibility to have Python-Package built based on multiple di
 6.12)
 Absolute imports are recommended in main module (__name__=="main")?
 yes, 
-in contratry to this, relative imports can be used for sub-packages dependencies (however...)
+in contrary to this, relative imports can be used for sub-packages dependencies (however, I dont started to like it yet)

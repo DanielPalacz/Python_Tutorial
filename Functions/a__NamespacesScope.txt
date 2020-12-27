@@ -1,10 +1,57 @@
 
 
+1)
+What is Namespace/Scope?
+-- namespace is the structure used to organize the symbolic names assigned to objects in a Python program.
+-- The scope is the region of a program in which that name has meaning.
+
+
+2)
+How LEG and B Namespaces are implemented in Python?
+-- LEG as dictionaries
+-- B as module
+
+
+3)
+When L/E and G/B Namespaces are created/terminated?
+-- L/E: during time of function execution
+-- G/B: during time of interpreter living
+
+
+4)
+What is LEGB rule? How iterpreter performs this rule?
+-- The interpreter searches (during runtime) for a name from the inside out, looking in the: local, enclosing, global, and finally the built-in scope (namespace)
+
+
+5)
+How to list Global Namespace members?
+-- globals(), dir() and dir(imported_module)
+
+
+6)
+How to list L/E Namespace members?
+-- locals() during time of living for this Namespace
+
+
+7)
+How to list B Namespace members?
+-- dir(__builtins__)
+
+
+8)
+What global/nonlocal keywords are doing?
+
+
+
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
 Namespace
--- the structure used to organize the symbolic names assigned to objects in a Python program
--- it is dictionary in which the keys are the object names and the values are the objects themselves. Each key-value pair maps a name to its corresponding object.
-
-
+-- the structure used to organize the symbolic names assigned to objects in a Python program.
+-- it is dictionary (apart of Builtins) in which the keys are the object names and the values are the objects themselves. Each key-value pair maps a name to its corresponding object.
 Scope:
 -- The scope of a name is the region of a program in which that name has meaning.
 
@@ -38,6 +85,10 @@ Python scopes and namespaces:
 -- built-in namespace doesn’t behave like a dictionary. Python implements it as a module.
 
 --------------------------------------------------------------------------------------------------------------
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
