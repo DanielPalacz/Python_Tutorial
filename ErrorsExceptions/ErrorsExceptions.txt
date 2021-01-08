@@ -22,7 +22,7 @@ except (Error2, Error3, Error4):
 
 except Error5 as e5:
     ~ code to handle Error5
-    ~ print(inst.args) -> printing Exception arguments
+    ~ print(e5.args) -> printing Exception arguments
 
 except:
     ~ code to handle unexpected errors
@@ -33,6 +33,7 @@ else:
 finally:
     ~ code to be executed in very end
     ~ often for cleanup activities
+    ~ ... print("Unexpected error:", sys.exc_info()[0]) --- > raise ---> we can even read type of expection and hndle it)
 
 -----------------------------------------------------------------------------
 -----------------------------------------------------------------------------

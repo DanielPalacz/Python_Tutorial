@@ -1,0 +1,44 @@
+
+>>> object
+<class 'object'>
+
+
+>>>
+>>> dir(__builtins__.object)
+['__class__', '__delattr__', '__dir__', '__doc__', '__eq__', '__format__', '__ge__', '__getattribute__', '__gt__', '__hash__', '__init__', '__init_subclass__', '__le__', '__lt__', '__ne__', '__new__', '__reduce__', '__reduce_ex__', '__repr__', '__setattr__', '__sizeof__', '__str__', '__subclasshook__']
+>>>
+
+
+
+>>> obj_example = object()
+>>> obj_example
+<object object at 0x000001F8230181C0>
+>>>
+>>> type(obj_example)
+<class 'object'>
+
+
+
+>>> obj_example.__doc__
+'The base class of the class hierarchy.\n\nWhen called, it accepts no arguments and returns a new featureless\ninstance that has no instance attributes and cannot be given any.\n'
+
+
+>>> print(obj_example.__doc__)
+The base class of the class hierarchy.
+
+When called, it accepts no arguments and returns a new featureless
+instance that has no instance attributes and cannot be given any.
+
+
+
+>>> obj_example.__dir__()
+['__repr__', '__hash__', '__str__', '__getattribute__', '__setattr__', '__delattr__', '__lt__', '__le__', '__eq__', '__ne__', '__gt__', '__ge__', '__init__', '__new__', '__reduce_ex__', '__reduce__', '__subclasshook__', '__init_subclass__', '__format__', '__sizeof__', '__dir__', '__class__', '__doc__']
+>>>
+
+
+>>> obj_example.__sizeof__()
+16
+>>> obj_example.__sizeof__.__doc__
+'Size of object in memory, in bytes.'
+
+
