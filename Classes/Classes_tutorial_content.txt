@@ -133,7 +133,7 @@ On the other hand, the Python implementation, written in C, can completely hide 
 -- Inheritance and constructor overriding
 ----> if __init__(..) is not present in the DerivedClassName then BaseClassName __init__(..) constructor method is used
 
-
+3
 
 
 Mechanics of super()
@@ -147,14 +147,17 @@ Mechanics of super()
 
 
 super() can also take two parameters ---> super(subclass, object_that_os_instance_of_subclass):
--- super() is equivalent to "super(DerivedClass1, self)"	- and it is default "super" behaviour - it is receomended usage of "super"
+-- super() is equivalent to "super(DerivedClass1, self)" ----- and it is default "super" behaviour - it is receomended usage of "super"
 ----> "syntax sugar"
 
 
 -- but super(BaseClass, self) will change def bahaviour
-********************
+***-> ***-> ***-> ***-> ***-> ***-> ***->
 -- the parameterless call to super() is recommended and sufficient for most use cases.
+
+
 ********************
+
 -- note: Technically, super() doesn’t return a method. It returns a proxy object.
 ----> this is an object that delegates calls to the correct class methods without making an additional object in order to do so.
 ----> The super() builtin returns a proxy object (temporary object of the superclass) that allows us to access methods of the base class.
@@ -198,6 +201,49 @@ this is similar to the effect of the global statement, the effect of which is li
 The same restriction applies to getattr(), setattr() and delattr(), as well as when referencing __dict__ directly.
 
 
+9.7. Odds and Ends
+
+Instance method objects have attributes too: 
+-- m.__self__ is the instance object with the method m(), 
+-- and m.__func__ is the function object corresponding to the method.
+
+print(x1.double_base_string.__func__)
+print(x1.double_base_string.__self__)
 
 
-#q
+
+
+
+9.8. Iterators (iterator protocol)
+
+-- it is concrete construction providing specific behaviour - kind of iterator protocol
+-- then there is the mechanics behind the iterator protocol
+
+
+-- "for" calls iter()/container
+-- The function iter() returns an iterator object that defines the method __next__() which accesses elements in the container one at a time.
+-- When there are no more elements, __next__() raises a StopIteration exception which tells the for loop to terminate.
+
+-- it is possible to call the __next__() method using the next() built-in function
+
+
+-- how to add iterator behavior to your class?
+----> Define an __iter__() method which returns an object with a __next__() method.
+----> If the class defines __next__(), then __iter__() can just return self.
+
+
+
+
+9.9. Generators
+-- Generators are a simple and powerful tool for creating iterators. 
+-- They are written like regular functions but use the yield statement whenever they want to return data.
+
+-- anything that can be done with generators can also be done with class-based iterators as described in the previous section.
+-- what makes generators so compact is that the __iter__() and __next__() methods are created automatically.
+-- when generators terminate, they automatically raise StopIteration
+
+
+
+9.10. Generator Expressions
+-- Some simple generators can be coded succinctly as expressions using a syntax similar to list comprehensions but with parentheses instead of square brackets
+
