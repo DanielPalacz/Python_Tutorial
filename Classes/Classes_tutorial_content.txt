@@ -245,5 +245,5 @@ print(x1.double_base_string.__self__)
 
 
 9.10. Generator Expressions
--- Some simple generators can be coded succinctly as expressions using a syntax similar to list comprehensions but with parentheses instead of square brackets
+-- Some simple generators can be coded succinctly as expressions using a syntax similar to list comprehensions but with parentheses instead of square brackets.
 
