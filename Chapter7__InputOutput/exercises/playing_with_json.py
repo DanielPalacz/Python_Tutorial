@@ -17,6 +17,10 @@ with open("1__exampled_json_file.json", "r") as jsonfile:
 #   with open("1__exampled_json_file.json", "r") as jsonfile:
 #       jsondata = jsonfile.read()
 
+print("---")
+print(jsondata)
+print("---")
+
 # parse file
 json_obj = json.loads(jsondata)
 

@@ -1,0 +1,102 @@
+
+
+Chapter 7 - IO - questions:
+https://docs.python.org/3/tutorial/inputoutput.html
+
+
+
+1. How you can perform string formatting in Python?
+-- fstring -> {}
+-- str.format() method
+-- old-style c-like formtting
+
+and also:
+-- str()		->	method to convert to string type
+-- repr()		->	function returns a printable representational string
+-- string mod.	->	
+
+
+
+2. What is PEP-like recomendation for string formatting?
+-- Use fstring (Literal String Interpolation)
+-- fstring PEP -> PEP-498
+-- fstrings optional arguments fe -> f'{name:10} ==> {phone:10d}'
+
+
+3. What are mode options in Python builtin open(filename, mode) method?
+-- r, r+
+-- w, w+
+-- b/t
+-- x/a
+
+
+
+4. What is default behaviour of open()? In the other words what is equivalent of open(filenamepath)?
+-- open(filenamepath, rt)
+
+
+
+5. Which Python module provides main facilities for dealing with various types of I/O?
+-- io
+-- https://docs.python.org/3/library/io.html#module-io
+-- three main types of I/O: text I/O, binary I/O and raw I/O.
+
+
+
+6. Recomendations
+
+a) How to use recomended Context Managers when we deal with file objects?
+>> with open('workfile') as f:
+>>     read_data = f.read()
+
+b) For reading lines from a file, you can loop over the file object. Memory efficient.
+-- >>> for line in f:
+--...    print(line, end='')
+
+
+
+
+7. What are example for method operating with file objects?
+-- f.read(size)
+-- f.readline()
+-- list(f) or f.readlines()
+-- f.write(string)
+-- f.tell()
+-- f.seek(offset, whence)
+
+
+
+8. JSON / intro
+-- JavaScript Object Notation)
+-- the textual format of transferring data through the network
+
+
+
+a)
+'The Data' allowed in JSON objects:
+-- string, object, array, number, null, boolean
+
+
+ 
+9. What is JSON-serialization?
+-- converting 'The Data' to JSON string representation
+-- serialized_json_obj1 = json.dumps([1, 'simple', 'list'])
+-- json.dump(x, fileobj_with_serialized_json_data)
+
+
+10. What is JSON-deserialization?
+-- Reconstructing 'The Data' from JSON string representation
+-- x_obj_with_deserialized_json_data = json.load(fileobj_with_serialized_json_data)
+
+
+11. JSON module in Python
+https://docs.python.org/3/library/json.html#module-json
+
+
+
+
+
+
+
+#
+
