@@ -9,14 +9,12 @@ reminder:
 ------------------------ ------------------------ ------------------------ ------------------------
 
 
-
-procedure / function / method
-
-
+1)
+What are differences between: procedure / function / method?
 
 
-
-How arguments can be passed to functions?
+2)
+How arguments can be passed to Python functions?
 -- as Default arguments values
 -- as positional arguments 
 -- as keywords arguments	(kwarg=value)
@@ -24,28 +22,34 @@ How arguments can be passed to functions?
 -- by using **kwarg feature ---> (in execution moment it receives unpacked dictionary)
 
 
+3)
+When default value of passed argument is evaluated?
+What kind of impact (Side effect) is possible because of this in  relation to Mutable Data objects?
+------------------------ ------------------------ ------------------------ ------------------------
+Default argument values:
+- The default value is evaluated only once (at the point of function definition in the defining scope)
+- This makes a difference when the default is a mutable object such as a list, dictionary, or instances of most classes
+------------------------ ------------------------ ------------------------ ------------------------
 
 
+4)
 What is determined by '/' and '*' in function definition?
+Which keyword argument was introduced in Python 3.8?
 -- "/" forces to use only positional arguments before
 -- "*" forces to use only keyword arguments after
 
 
-
+5)
 What is required order for passing those arguments?
 -- positional before keywords
 -- *arg feature before **kwarg feature
 
 
-Default argument values:
--- The default values are evaluated at the point of function definition in the defining scope
--- The default value is evaluated only once. This makes a difference when the default is a mutable object such as a list, dictionary, or instances of most classes. 
-
-
+6)
 When positional / keywords parameters should be used?
 
 
-
+7)
 Typical function definitions:
 -- def f(pos1, /, pos_or_kw2, *, kwarg3)
 -- def f(pos1, /, pos_or_kw, **kwargs)
@@ -53,11 +57,11 @@ Typical function definitions:
 -- def f(pos1, /, kw1, **kwargs)
 
 
-
+8)
 Atypical function definitions(or I jus dont like this):
 -- def f(*args, kwarg1)
 
-
+9)
 How you cant define functions?
 -- nothing can be after **kwargs
 -- positionals should be always first

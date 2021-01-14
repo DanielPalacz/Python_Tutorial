@@ -14,12 +14,12 @@ How LEG and B Namespaces are implemented in Python?
 
 3)
 When L/E and G/B Namespaces are created/terminated?
--- L/E: during time of function execution
+-- L/E: during time of function execution (or class)
 -- G/B: during time of interpreter living
 
 
 4)
-What is LEGB rule? How iterpreter performs this rule?
+What is LEGB rule? How interpreter performs this rule?
 -- The interpreter searches (during runtime) for a name from the inside out, looking in the: local, enclosing, global, and finally the built-in scope (namespace)
 
 
@@ -82,9 +82,8 @@ Python scopes and namespaces:
 -- dir(__builtins__)
 -- The Python interpreter creates the built-in namespace when it starts up
 -- This namespace remains in existence until the interpreter terminates.
--- built-in namespace doesn’t behave like a dictionary. Python implements it as a module.
+-- built-in namespace doesn't behave like a dictionary. Python implements it as a module.
 
---------------------------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -97,7 +96,6 @@ Other Namespace-area functionalities
 -- global/nonlocal keywords
 
 
-Rather not recomended
+Rather not recommended
 -- using global/nonlocal keywords
--- writing functions modifying data outside the local scope (kind of side efect)
-
+-- writing functions modifying data outside the local scope (kind of side effect)
