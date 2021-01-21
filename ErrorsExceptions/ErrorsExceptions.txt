@@ -33,7 +33,8 @@ else:
 finally:
     ~ code to be executed in very end
     ~ often for cleanup activities
-    ~ ... print("Unexpected error:", sys.exc_info()[0]) --- > raise ---> we can even read type of expection and hndle it)
+    ~ ...print("Unexpected error:", sys.exc_info()[0]) - > raise -> we can even read type of expectation and handle it)
+
 
 -----------------------------------------------------------------------------
 -----------------------------------------------------------------------------
