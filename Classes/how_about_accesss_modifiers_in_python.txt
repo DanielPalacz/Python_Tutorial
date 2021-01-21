@@ -1,0 +1,32 @@
+
+
+public:
+
+All members of a class are by default public in Python.
+
+
+
+privacy in python:
+
+The private members of a class are only accessible within the class.
+privacy in Python --> convention (but you need to workaround )
+name mangling:
+-- # print(obj1.__a1)
+-- print(obj1._DerivedClass1__a1)
+
+
+protection in python:
+
+protected members of a class can be accessed by other members within the class and are also available to its subclasses.
+Python has a unique convention to make a member protected: Add a prefix _ (single underscore).
+This prevents its usage by outside entities unless it is a subclass.
+However, this doesnt fully perform the functionality of the protected modifier.
+The attribute defined in the above program is accessible outside the class scope. It can also be modified as well.
+
+protection is only convention in python
+
+
+NoteX:
+Istotnie w Python nie ma pól private w rozumieniu C++ -
+w tym sensie świadomie w Python koncepcja niedostępnych (ukrytych) z zewnątrz pół została porzucona.
+Istnieje powszechna konwencja, że pojedynczym pokreśleniem (_X) sygnalizuje się pola wewnętrzne obiektu które nie powinny być modyfikowane.
