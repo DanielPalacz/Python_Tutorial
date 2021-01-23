@@ -8,7 +8,7 @@ https://docs.python.org/3/tutorial/inputoutput.html
 1. How you can perform string formatting in Python?
 -- fstring -> {}
 -- str.format() method
--- old-style c-like formtting
+-- old-style c-like formatting
 
 and also:
 -- str()		->	method to convert to string type
@@ -17,7 +17,7 @@ and also:
 
 
 
-2. What is PEP-like recomendation for string formatting?
+2. What is PEP-like recommendation for string formatting?
 -- Use fstring (Literal String Interpolation)
 -- fstring PEP -> PEP-498
 -- fstrings optional arguments fe -> f'{name:10} ==> {phone:10d}'
@@ -43,7 +43,7 @@ and also:
 
 
 
-6. Recomendations
+6. Recommendations
 
 a) How to use recomended Context Managers when we deal with file objects?
 >> with open('workfile') as f:
@@ -68,7 +68,7 @@ b) For reading lines from a file, you can loop over the file object. Memory effi
 
 8. JSON / intro
 -- JavaScript Object Notation)
--- the textual format of transferring data through the network
+-- the textual format for transferring data through the network
 
 
 

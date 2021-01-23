@@ -14,7 +14,7 @@ Repetition about Python scopes of symbol tables (namespaces):
 Python module (file with “.py” extension) is comprised of:
 - executable part ---> always executed during import
 - definition part (functions, classes, variables)
- 
+
 6.2)
 python special variable __name__ is set to:
 - "__main__" - when the given script is executed
