@@ -1,0 +1,21 @@
+
+set of 5 rules about Object Oriented Programming
+initiated by Robert C. Martin (Uncle Bob)
+
+
+
+"S" - Single Responsibility principle
+Class should have only 1 Responsibility
+
+"O" - Open/closed principle
+Classes should be open for extension, but closed for modification
+
+"L" - Liskov substitution principle
+It is about Functions referring to Base Classes.
+Those functions should be able to use also objects inheriting from Base Classes, BUT without knowing in details those objects.
+
+"I" - Interface segregation principle
+Many dedicated interfaces are better than one general.
+
+"D" - Dependency inversion principle
+High level modules should not depend from low-level modules. Dependency between them should come from abstraction.
