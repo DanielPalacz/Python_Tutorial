@@ -1,0 +1,79 @@
+
+
+https://tkdocs.com/resources/backgrounder.html
+
+
+what is Tk?
+
+-- user interface toolkit that makes it easy to build desktop graphical user interfaces
+-- cross-platform, meaning the same code can be made to run the same on Windows, Mac OS X, or X11 under a huge range of Unix systems (e.g. Linux).
+
+-- Compared with most user interface toolkits, Tk is also quite high level, meaning that it takes care of a lot of details for you. 
+-- Tk is also unique in that it was designed from the start to be paired with a high level dynamic programming language (like Python, Tcl, Ruby, and Perl) as opposed to lower-level languages like C or C++.
+
+-- In fact, you'll find a Tk binding for most dynamic languages available today. It also is BSD-licensed, making it attractive for both open source and commercial developers.
+
+
+
+
+
+The Early Years
+-- Tk was created around 1988 by John Ousterhout, at that time a computer science professor at UC Berkeley.
+-- It was developed as a way to easily build GUI's from his Tcl scripting language. Tcl was Unix-only at first, and so Tk ran under X11.
+-- The first open source release was around 1991, with fairly rapid adoption starting about a year later. You can find John's recollections of the early years at the main Tcl/Tk developer site, www.tcl.tk.
+
+-- Tk caught on because lots of people at universities were using Unix/X11 in the early 1990s, and the mainstream X11 libraries like Xt, Xaw and Motif were just horridly painful to use, where a "hello world" app takes literally a couple hundred lines of C or C++.
+-- Then Tk comes along, where a good looking "hello world" is a one-liner, and the toolkit took care of all the housekeeping like redrawing, clipping, hit detection, event dispatch and more. It was a no-brainer.
+
+-- Developers and users of languages other than Tcl paid attention too, and many language bindings to Tk were developed. *** Python's Tkinter appeared around mid-1994, with Perl's PerlTk soon following. ***
+
+
+
+The Middle Years
+-- In 1994, John moved to Sun Labs, where he assembled a team to help move Tcl/Tk forward even more.
+-- The bulk of the team shifted to a startup called Scriptics (later Ajuba), and continued to evolve Tcl/Tk until the company was acquired in 2000, mostly for the non-Tcl/Tk assets the company had developed.
+
+-- For Tk, those years produced a major step forward, the development of the Windows and Mac versions. This meant that the same script to produce a GUI would run unmodified on Unix, Windows or Mac.
+-- Stewardship of Tk (and Tcl) moved to a more community-centered model in mid-2000, with a Tcl/Tk core team at the center, but with much wider participation.
+
+-- Tk continued to evolve, but not at a hugely dramatic pace; the incremental enhancements and adding support for new versions of Windows and then Mac OS X precluded much in the way of major leaps forward, 
+-- there was almost no core work aimed at following the dueling Gnome/KDE user inteface standards emerging on Linux. 
+-- Though Tk has always been highly customizable, unless you knew what you were doing and put in the effort, it started looking more and more dated.
+
+
+
+Tk Today
+-- Tk 8.5.0 was released in December 20, 2007, and presented as major a step forward as the Windows and Mac versions in 8.0, over ten years earlier.
+-- The core distribution included "new" widgets for such now-common components like trees, comboboxes, tabbed notebooks and more, that had only been available before as add-ons (with far too many to choose from).
+
+-- Most importantly, Tk 8.5 added a new "themed" widget set, which complements but does not replace the "classic" widget set. The classic widgets provide full backwards-compatibility, retaining their almost infinite flexibility, but often dated appearance.
+-- The new themed widgets look much better on their respective platforms out of the box, and developers should generally use them for nearly all mainstream user interface needs.
+-- The new widgets also support changing their look and feel via themes, making "skinnable" user interfaces easy for applications and platforms where they are appropriate.
+
+-- Tk 8.5 is a milestone release. Though there are still some rough edges, and the full transition from "classic" to "themed" widgets will take some time (and some developer effort),
+-- this represents the first time in recent memory that everything needed to build good looking Tk applications is available in the core, without huge amounts of tweaking and add-ons.
+
+
+
+
+
+https://tkdocs.com/about.html
+What you can Expect?
+
+-- This site will most decided not be a repository of all known information about Tk, or attempt to catalog every possible choice of widget, extension, technique or application that is out there. 
+-- In fact, we want this site to help you not need to make choices, by providing you with a highly-opinionated and biased take on what we think mainstream developers should know to build mainstream desktop applications. 
+
+-- As much as possible, we'll aim to provide language-neutral information. 
+
+
+
+
+https://tkdocs.com/tutorial/intro.html
+-- If you're new to Tk or creating a new program, this tutorial will ensure you get started the right way.
+-- The general state of Tk documentation (outside the Tcl-oriented reference documentation, which is excellent) is unfortunately not at a high point these days. This is particularly true for developers using Tk from languages other than Tcl, and developers working on multiple platforms.
+-- So this tutorial will, as much as possible, target developers on the three main platforms (Windows, macOS, Linux), and also be language-neutral.
+
+-- So this tutorial will, as much as possible, target developers on the three main platforms (Windows, macOS, Linux), and also be language-neutral. Initially, the tutorial will cover Tcl, Ruby, Perl and Python. 
+-- It's also not a reference guide. It's not going to cover everything, just the essentials you need in 95% of applications. The rest you can find in reference documentation.
+
+
