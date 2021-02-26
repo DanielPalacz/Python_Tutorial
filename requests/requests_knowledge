@@ -1,0 +1,21 @@
+
+
+
+https://2.python-requests.org/en/master/
+*****
+
+
+https://realpython.com/python-requests/
+
+
+pip install requests
+pipenv install requests
+import requests
+
+
+HTTP methods - allowing to perform different actions when making an HTTP request
+
+
+# GET Request:
+
+
