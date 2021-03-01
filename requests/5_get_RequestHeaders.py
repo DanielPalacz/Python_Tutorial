@@ -91,11 +91,22 @@ response2 = requests.get(
 
 #
 # 5. Request Headers
+#
+# Customize request Headers
 
+response3 = requests.get(
+    'https://api.github.com/search/repositories',
+    params={'q': 'requests+language:python'},
+    headers={'Accept': 'application/vnd.github.v3.text-match+json'},
+)
 
-
-print("---")
-
-file = open("requests_knowledge")
-json_obj = json.dumps(file.read())
-print(json_obj)
+print(" 5. Request Headers")
+input("response2_items will be printed:")
+response2_items = response2.json()["items"]
+print(response2_items[0]["text_matches"])
+print(len(response2_items))
+print()
+input("response3_items will be printed:")
+response3_items = response3.json()["items"]
+print(response3_items[0]["text_matches"])
+print(len(response3_items))

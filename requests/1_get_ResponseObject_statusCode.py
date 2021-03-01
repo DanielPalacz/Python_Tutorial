@@ -12,3 +12,9 @@ get_http_response = requests.get('https://api.github.com')
 
 print(get_http_response.status_code)
 get_http_response.raise_for_status()
+
+print("Response object namespace - dir(get_http_response):")
+print(dir(get_http_response))
+for el in dir(get_http_response):
+    print(el)
+

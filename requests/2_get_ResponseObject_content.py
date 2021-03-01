@@ -26,7 +26,7 @@ print("2.1. content in bytes")
 print(get_http_response.content)
 
 #
-# 2.2. Content in bytes (with def encoding)
+# 2.2. Content as text (with def encoding)
 print("2.2. content in bytes (with def encoding)")
 print(get_http_response.text)
 
@@ -37,7 +37,7 @@ print(get_http_response.text)
 
 
 #
-# 2.3. Content in bytes (with setuped utf-g encoding)
+# 2.3. Content as text (with setuped utf-g encoding)
 get_http_response.encoding = 'utf-8'
 # Optional: requests infers this internally
 print("2.3. content in bytes (with setuped utf-g encoding)")

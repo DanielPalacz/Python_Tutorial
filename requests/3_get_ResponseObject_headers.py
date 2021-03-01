@@ -61,7 +61,7 @@ print(get_http_response.json())
 print("3. Headers")
 headers = get_http_response.headers
 print(headers)
-for k, v in  headers.items():
+for k, v in headers.items():
     print(f"Header name: {k} - header value: {v}")
 #
 # The response headers can give you useful information, such as

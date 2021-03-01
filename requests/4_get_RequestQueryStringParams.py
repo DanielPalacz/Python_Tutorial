@@ -70,11 +70,12 @@ for k, v in  headers.items():
 
 # get_http_response.headers returns a dictionary-like object, allowing you to access header values by key
 
+
 #
 # 4. Query String Parameters
 #
 # https://api.github.com/search/repositories?q=requests+language:python
-# Search GitHub's repositories for requests
+# the above url, transformed to request-request form:
 response1 = requests.get(
     'https://api.github.com/search/repositories',
     params={'q': 'requests+language:python'},
